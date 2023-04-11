@@ -3,7 +3,7 @@ $couleur_bulle_classe = "rose";
 $page_active = "index";
 
 require_once('./ressources/includes/connexion-bdd.php');
-
+// prepare the statment for getting all the articles
 $listeArticlesCommande = $clientMySQL->prepare('SELECT * FROM article');
 $listeArticlesCommande->execute();
 $listeArticles = $listeArticlesCommande->fetchAll();
